@@ -1,7 +1,7 @@
 export const FavoriteSection = () => {
   return (
     <>
-      <div className="py-4">
+      <div className="py-4 lg:pt-6">
         <h6
           className="text-balance px-4 text-black font-bold text-3xl "
           tabIndex={8}
@@ -9,7 +9,7 @@ export const FavoriteSection = () => {
           Te dejo mis favoritas!
         </h6>
       </div>
-      <ul className="flex w-full gap-8 overflow-x-scroll px-4 py-2 pb-4 snap-x">
+      <ul className="flex w-full gap-8 overflow-x-scroll px-4 py-2 pb-4 snap-x no-scrollbar">
         <li className="flex-none max-h-[515px] snap-center" tabIndex={9}>
           <img
             className="h-full max-h-[515px] w-auto snap-center"
