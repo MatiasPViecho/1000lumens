@@ -1,7 +1,7 @@
 export const Header = () => {
     return(
-        <header className="sticky top-0 pt-2 pb-3 bg-white/30 backdrop-blur-sm max-w-72 mx-auto rounded-b-full">
-            <ul className="flex gap-4 justify-center">
+        <header className="fixed top-0 z-50 w-full ">
+            <ul className="flex gap-4 justify-center pt-2 pb-3  bg-black/50 backdrop-blur-sm max-w-72  rounded-b-full  text-white mx-auto">
                 <li>Inicio</li>
                 <li>Mis Fotos</li>
                 <li>Sobre Mí</li>
