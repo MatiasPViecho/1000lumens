@@ -20,7 +20,7 @@ export default function Home() {
       <div className="py-4">
         <h6 className="text-balance px-4 text-black font-bold text-3xl ">Te dejo mis favoritas!</h6>
       </div>
-      <ul className="flex w-full gap-8 overflow-x-scroll px-4 py-2">
+      <ul className="flex w-full gap-8 overflow-x-scroll px-4 py-2 pb-24">
         <li className="flex-none max-h-[515px]"><img className="h-full max-h-[515px] w-auto" src="/photos/IMG_3705.webp" /></li>
         <li className="flex-none max-h-[515px]"><img className="h-full max-h-[515px] " src="/photos/IMG_trabajo.webp" /></li>
         <li className="flex-none max-h-[515px]"><img className="h-full max-h-[515px] " src="/photos/IMG_tanque.webp" /></li>
