@@ -1,24 +1,93 @@
+"use client";
 import Link from "next/link";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const FavoriteSection = () => {
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    if (typeof ref.current === "undefined") return;
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 1440px)", () => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          toggleActions: "play restart pause pause",
+          start: "top top",
+          end: () => innerWidth,
+          trigger: ref.current,
+          scrub: 1.5,
+          pin: ".gsap-main-container",
+        },
+        xPercent: -300,
+        y: 240,
+        opacity: 1,
+        duration: 1,
+      });
+    });
+    mm.add("(min-width: 1024px) and (max-width: 1439px)", () => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          toggleActions: "play restart pause pause",
+          start: "top top",
+          end: () => innerWidth,
+          trigger: ref.current,
+          scrub: 1.5,
+          pin: ".gsap-main-container",
+        },
+        xPercent: -350,
+        y: 240,
+        opacity: 1,
+        duration: 1,
+      });
+    });
+    mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          toggleActions: "play restart pause pause",
+          start: "bottom 75%",
+          end: () => innerWidth * 4,
+          trigger: ref.current,
+          scrub: 1.5,
+          pin: true,
+        },
+        xPercent: -200,
+        opacity: 1,
+        duration: 1,
+      });
+    });
+    mm.add("(max-width: 767px)", () => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          toggleActions: "play restart pause pause",
+          start: "bottom 75%",
+          end: () => innerWidth * 5,
+          trigger: ref.current,
+          scrub: 1.5,
+          pin: true,
+        },
+        xPercent: () => -400,
+        opacity: 1,
+        duration: 1,
+      });
+    });
+  });
   return (
     <>
-      <div className="py-4 lg:pt-6">
-        <h6
-          className="text-balance px-4 text-black font-bold text-3xl "
-          tabIndex={8}
-        >
-          Te dejo mis favoritas!
-        </h6>
-      </div>
-      <ul className="flex w-full gap-8 overflow-x-scroll px-4 py-2 pb-4 snap-x no-scrollbar">
+      <ul
+        ref={ref}
+        className="gsap-container z-40 lg:translate-x-[200%] flex flex-nowrap  gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
+      >
         <li
           className="flex-none pointer-events-none max-h-[515px] snap-center"
           tabIndex={9}
         >
           <img
-            className="h-full max-h-[515px] w-auto snap-center"
-            src="/photos/IMG_3705.webp"
+            className="h-full max-h-[515px] w-auto snap-center md:snap-none"
+            src="/photos/IMG_camino.webp"
           />
         </li>
         <li
@@ -45,11 +114,11 @@ export const FavoriteSection = () => {
         >
           <img
             className="h-full max-h-[515px] w-auto"
-            src="/photos/IMG_4173.webp"
+            src="/photos/IMG_5514.webp"
           />
         </li>
         <li
-          className="flex-none max-h-[515px] max-w-[300px] snap-center"
+          className="flex-none max-h-[515px] max-w-[350px] snap-center"
           tabIndex={13}
         >
           <div className="bg-black h-full w-full">
