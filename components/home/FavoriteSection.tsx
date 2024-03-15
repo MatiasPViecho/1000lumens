@@ -3,22 +3,15 @@ import Link from "next/link";
 export const FavoriteSection = () => {
   return (
     <>
-      <div className="py-4 lg:pt-6">
-        <h6
-          className="text-balance px-4 text-black font-bold text-3xl "
-          tabIndex={8}
-        >
-          Te dejo mis favoritas!
-        </h6>
-      </div>
-      <ul className="flex w-full gap-8 overflow-x-scroll px-4 py-2 pb-4 snap-x no-scrollbar">
+      <div className="py-4 lg:pt-6"></div>
+      <ul className="flex w-full gap-8 overflow-x-scroll px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 snap-x no-scrollbar">
         <li
           className="flex-none pointer-events-none max-h-[515px] snap-center"
           tabIndex={9}
         >
           <img
-            className="h-full max-h-[515px] w-auto snap-center"
-            src="/photos/IMG_3705.webp"
+            className="h-full max-h-[515px] w-auto snap-center md:snap-none"
+            src="/photos/IMG_camino.webp"
           />
         </li>
         <li
@@ -45,11 +38,11 @@ export const FavoriteSection = () => {
         >
           <img
             className="h-full max-h-[515px] w-auto"
-            src="/photos/IMG_4173.webp"
+            src="/photos/IMG_5514.webp"
           />
         </li>
         <li
-          className="flex-none max-h-[515px] max-w-[300px] snap-center"
+          className="flex-none max-h-[515px] max-w-[350px] snap-center"
           tabIndex={13}
         >
           <div className="bg-black h-full w-full">

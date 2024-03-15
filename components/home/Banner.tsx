@@ -1,6 +1,6 @@
 export const Banner = () => {
   return (
-    <div className="flex flex-col gap-8 py-8 px-4 text-black text-wrap font-bold lg:text-right">
+    <div className="flex flex-col gap-8 py-8 px-4 text-black text-wrap font-bold lg:text-right max-w-3xl lg:max-w-none mx-auto lg:mx-0">
       <h2 className="text-5xl ">SOY MATÍAS </h2>
       <h3 className="text-4xl">
         <a
