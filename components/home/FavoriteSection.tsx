@@ -12,17 +12,34 @@ export const FavoriteSection = () => {
   useGSAP(() => {
     if (typeof ref.current === "undefined") return;
     const mm = gsap.matchMedia();
-    mm.add("(min-width: 1024px)", () => {
+    mm.add("(min-width: 1440px)", () => {
       gsap.to(ref.current, {
         scrollTrigger: {
           toggleActions: "play restart pause pause",
-          start: "center center",
+          start: "top top",
           end: () => innerWidth,
           trigger: ref.current,
           scrub: 1.5,
-          pin: true,
+          pin: ".gsap-main-container",
         },
-        xPercent: -150,
+        xPercent: -300,
+        y: 240,
+        opacity: 1,
+        duration: 1,
+      });
+    });
+    mm.add("(min-width: 1024px) and (max-width: 1439px)", () => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          toggleActions: "play restart pause pause",
+          start: "top top",
+          end: () => innerWidth,
+          trigger: ref.current,
+          scrub: 1.5,
+          pin: ".gsap-main-container",
+        },
+        xPercent: -350,
+        y: 240,
         opacity: 1,
         duration: 1,
       });
@@ -33,7 +50,6 @@ export const FavoriteSection = () => {
           toggleActions: "play restart pause pause",
           start: "bottom 75%",
           end: () => innerWidth * 4,
-          markers: true,
           trigger: ref.current,
           scrub: 1.5,
           pin: true,
@@ -49,7 +65,6 @@ export const FavoriteSection = () => {
           toggleActions: "play restart pause pause",
           start: "bottom 75%",
           end: () => innerWidth * 5,
-          markers: true,
           trigger: ref.current,
           scrub: 1.5,
           pin: true,
@@ -64,7 +79,7 @@ export const FavoriteSection = () => {
     <>
       <ul
         ref={ref}
-        className="gsap-container z-40 translate-x-[96] flex flex-nowrap w-[full] gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
+        className="gsap-container z-40 lg:translate-x-[200%] flex flex-nowrap  gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
       >
         <li
           className="flex-none pointer-events-none max-h-[515px] snap-center"
