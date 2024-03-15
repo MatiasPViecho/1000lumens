@@ -5,7 +5,7 @@ import { Middle } from "@/components/home/Middle";
 
 export default function Home() {
   return (
-    <main className="lg:max-w-5xl lg:mx-auto lg:pt-16">
+    <main className="lg:max-w-5xl lg:mx-auto lg:pt-16 overflow-hidden">
       <div className="lg:flex" tabIndex={3}>
         <div className="lg:flex-1 lg:*:max-h-[724px]" tabIndex={4}>
           <Intro />

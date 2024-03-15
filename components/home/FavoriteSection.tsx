@@ -1,10 +1,37 @@
+"use client";
 import Link from "next/link";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const FavoriteSection = () => {
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    if (typeof ref.current === "undefined") return;
+
+    gsap.to(ref.current, {
+      scrollTrigger: {
+        toggleActions: "play restart pause pause",
+        start: "center 60%",
+        markers: true,
+        trigger: ref.current,
+        scrub: 1.5,
+        pin: true,
+      },
+      x: () => -(innerWidth * 4),
+      opacity: 1,
+      duration: 1,
+    });
+  });
   return (
     <>
-      <div className="py-4 lg:pt-6"></div>
-      <ul className="flex w-full gap-8 overflow-x-scroll px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 snap-x no-scrollbar">
+      <ul
+        ref={ref}
+        className="gsap-container translate-x-[96] flex flex-nowrap w-[full] gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
+      >
         <li
           className="flex-none pointer-events-none max-h-[515px] snap-center"
           tabIndex={9}
