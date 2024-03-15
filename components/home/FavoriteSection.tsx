@@ -11,26 +11,60 @@ export const FavoriteSection = () => {
 
   useGSAP(() => {
     if (typeof ref.current === "undefined") return;
-
-    gsap.to(ref.current, {
-      scrollTrigger: {
-        toggleActions: "play restart pause pause",
-        start: "center 60%",
-        markers: true,
-        trigger: ref.current,
-        scrub: 1.5,
-        pin: true,
-      },
-      x: () => -(innerWidth * 4),
-      opacity: 1,
-      duration: 1,
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 1024px)", () => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          toggleActions: "play restart pause pause",
+          start: "center center",
+          end: () => innerWidth,
+          trigger: ref.current,
+          scrub: 1.5,
+          pin: true,
+        },
+        xPercent: -150,
+        opacity: 1,
+        duration: 1,
+      });
+    });
+    mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          toggleActions: "play restart pause pause",
+          start: "bottom 75%",
+          end: () => innerWidth * 4,
+          markers: true,
+          trigger: ref.current,
+          scrub: 1.5,
+          pin: true,
+        },
+        xPercent: -200,
+        opacity: 1,
+        duration: 1,
+      });
+    });
+    mm.add("(max-width: 767px)", () => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          toggleActions: "play restart pause pause",
+          start: "bottom 75%",
+          end: () => innerWidth * 5,
+          markers: true,
+          trigger: ref.current,
+          scrub: 1.5,
+          pin: true,
+        },
+        xPercent: () => -400,
+        opacity: 1,
+        duration: 1,
+      });
     });
   });
   return (
     <>
       <ul
         ref={ref}
-        className="gsap-container translate-x-[96] flex flex-nowrap w-[full] gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
+        className="gsap-container z-40 translate-x-[96] flex flex-nowrap w-[full] gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
       >
         <li
           className="flex-none pointer-events-none max-h-[515px] snap-center"
