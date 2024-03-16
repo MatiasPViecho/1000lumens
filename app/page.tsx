@@ -18,7 +18,10 @@ export default function Home() {
           <Middle />
         </div>
       </div>
-      <div tabIndex={8} className="pb-20 lg:fixed lg:top-0">
+      <div
+        tabIndex={8}
+        className="pb-20 lg:fixed lg:top-0 lg:left-0 pointer-events-none"
+      >
         <FavoriteSection />
       </div>
     </main>
