@@ -35,7 +35,7 @@ export const MouseIconContainer = ({
       className={`${classes}`}
     >
       <div
-        className={`mouseFlair fixed shadow-2xl w-72 h-72 rounded-full z-50 pointer-events-none  -translate-x-1/2 -translate-y-1/2 -top-24 -left-56 backdrop-brightness-[2.75]`}
+        className={`mouseFlair fixed shadow-3xl backdrop-blur-[0.7px] w-24 h-24 rounded-full z-10 pointer-events-none  -translate-x-1/2 -translate-y-1/2 top-0 left-0 backdrop-brightness-150 backdrop-hue-rotate-180 backdrop-invert animate-pulse`}
       ></div>
       {children}
     </div>

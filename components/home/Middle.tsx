@@ -3,7 +3,7 @@ export const Middle = () => {
     <div className="relative h-[400px] sm:h-[450px] md:h-[500px] overflow-hidden pointer-events-none">
       <div
         tabIndex={7}
-        className=" w-full lg:mx-0 absolute left-4 top-6 sm:top-12 md:top-24 z-10 font-bold text-2xl sm:text-3xl text-white tracking-wide pr-8 pl-2 text-balance flex flex-col gap-32 lg:text-right"
+        className=" w-full lg:mx-0 absolute left-4 top-6 sm:top-12 md:top-24 z-30 font-bold text-2xl sm:text-3xl text-white tracking-wide pr-8 pl-2 text-balance flex flex-col gap-32 lg:text-right"
       >
         <h4 className="max-w-3xl lg:max-w-none mx-auto w-full">
           Comencé mi carrera en el mundo del desarrollo web hace +5 años
