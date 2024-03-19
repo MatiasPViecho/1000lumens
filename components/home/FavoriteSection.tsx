@@ -23,7 +23,7 @@ export const FavoriteSection = () => {
           pin: ".gsap-main-container",
         },
         xPercent: -300,
-        y: 240,
+        y: -240,
         opacity: 1,
         duration: 1,
       });
@@ -33,13 +33,13 @@ export const FavoriteSection = () => {
         scrollTrigger: {
           toggleActions: "play restart pause pause",
           start: "top top",
-          end: () => innerWidth,
+          end: () => innerWidth * 2,
           trigger: ref.current,
-          scrub: 1.5,
+          scrub: 3,
           pin: ".gsap-main-container",
         },
         xPercent: -350,
-        y: 240,
+        y: -240,
         opacity: 1,
         duration: 1,
       });
@@ -69,7 +69,7 @@ export const FavoriteSection = () => {
           scrub: 1.5,
           pin: true,
         },
-        xPercent: () => -400,
+        xPercent: () => -370,
         opacity: 1,
         duration: 1,
       });
@@ -82,7 +82,7 @@ export const FavoriteSection = () => {
         className="gsap-container z-40 lg:translate-x-[200%] flex flex-nowrap  gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
       >
         <li
-          className="flex-none pointer-events-none max-h-[515px] snap-center"
+          className="lg:translate-y-96 flex-none pointer-events-none max-h-[515px] snap-center"
           tabIndex={9}
         >
           <img
@@ -91,7 +91,7 @@ export const FavoriteSection = () => {
           />
         </li>
         <li
-          className="flex-none pointer-events-none max-h-[515px] snap-center"
+          className="lg:translate-y-96 flex-none pointer-events-none max-h-[515px] snap-center"
           tabIndex={10}
         >
           <img
@@ -100,7 +100,7 @@ export const FavoriteSection = () => {
           />
         </li>
         <li
-          className="flex-none pointer-events-none max-h-[515px] snap-center"
+          className="lg:translate-y-96 flex-none pointer-events-none max-h-[515px] snap-center"
           tabIndex={11}
         >
           <img
@@ -109,7 +109,7 @@ export const FavoriteSection = () => {
           />
         </li>
         <li
-          className="flex-none pointer-events-none max-h-[515px] snap-center"
+          className="lg:translate-y-96 flex-none pointer-events-none max-h-[515px] snap-center"
           tabIndex={12}
         >
           <img
@@ -118,7 +118,7 @@ export const FavoriteSection = () => {
           />
         </li>
         <li
-          className="flex-none max-h-[515px] max-w-[350px] snap-center"
+          className="lg:translate-y-96 flex-none max-h-[515px] max-w-[350px] snap-center pointer-events-auto cursor-pointer"
           tabIndex={13}
         >
           <div className="bg-black h-full w-full">
