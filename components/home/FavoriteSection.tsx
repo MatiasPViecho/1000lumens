@@ -59,27 +59,12 @@ export const FavoriteSection = () => {
         duration: 1,
       });
     });
-    mm.add("(max-width: 767px)", () => {
-      gsap.to(ref.current, {
-        scrollTrigger: {
-          toggleActions: "play restart pause pause",
-          start: "bottom 75%",
-          end: () => innerWidth * 5,
-          trigger: ref.current,
-          scrub: 1.5,
-          pin: true,
-        },
-        xPercent: () => -370,
-        opacity: 1,
-        duration: 1,
-      });
-    });
   });
   return (
     <>
       <ul
         ref={ref}
-        className="gsap-container z-40 lg:translate-x-[200%] flex flex-nowrap  gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
+        className="gsap-container z-40 lg:translate-x-[200%] flex md:flex-nowrap  gap-8 px-8 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
       >
         <li
           className="lg:translate-y-96 flex-none pointer-events-none max-h-[515px] snap-center"

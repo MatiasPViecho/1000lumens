@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div
           tabIndex={8}
-          className="pb-20 lg:fixed lg:top-0 lg:left-0 pointer-events-none"
+          className="pb-20 lg:fixed lg:top-0 lg:left-0 md:pointer-events-none overflow-x-scroll md:overflow-visible"
         >
           <FavoriteSection />
         </div>
