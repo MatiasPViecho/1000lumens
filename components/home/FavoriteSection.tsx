@@ -59,27 +59,12 @@ export const FavoriteSection = () => {
         duration: 1,
       });
     });
-    mm.add("(max-width: 767px)", () => {
-      gsap.to(ref.current, {
-        scrollTrigger: {
-          toggleActions: "play restart pause pause",
-          start: "bottom 75%",
-          end: () => innerWidth * 5,
-          trigger: ref.current,
-          scrub: 1.5,
-          pin: true,
-        },
-        xPercent: () => -370,
-        opacity: 1,
-        duration: 1,
-      });
-    });
   });
   return (
     <>
       <ul
         ref={ref}
-        className="gsap-container z-40 lg:translate-x-[200%] flex flex-nowrap  gap-8 px-4 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
+        className="gsap-container z-40 lg:translate-x-[200%] flex md:flex-nowrap  gap-8 px-8 sm:px-8 md:px-40 lg:px-80 py-2 pb-4 no-scrollbar"
       >
         <li
           className="lg:translate-y-96 flex-none pointer-events-none max-h-[515px] snap-center"
@@ -88,6 +73,7 @@ export const FavoriteSection = () => {
           <img
             className="h-full max-h-[515px] w-auto snap-center md:snap-none"
             src="/photos/IMG_camino.webp"
+            alt="Carretera apuntando en forma de triángulo a una montaña con un charco de agua embarrado a los pies"
           />
         </li>
         <li
@@ -97,6 +83,7 @@ export const FavoriteSection = () => {
           <img
             className="h-full max-h-[515px] "
             src="/photos/IMG_trabajo.webp"
+            alt="Obrero realizando un trabajo de cerámica en barro, colores cálidos"
           />
         </li>
         <li
@@ -106,6 +93,7 @@ export const FavoriteSection = () => {
           <img
             className="h-full max-h-[515px] "
             src="/photos/IMG_tanque.webp"
+            alt="Montaje de una estructura prendida fuego"
           />
         </li>
         <li
@@ -115,6 +103,7 @@ export const FavoriteSection = () => {
           <img
             className="h-full max-h-[515px] w-auto"
             src="/photos/IMG_5514.webp"
+            alt="Patinadora realizando un truco"
           />
         </li>
         <li

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 export const MouseIconContainer = ({
@@ -23,11 +23,11 @@ export const MouseIconContainer = ({
     { scope: containerRef }
   );
 
-  const handleMouseEvent = (e: React.MouseEvent) => {
+  const handleMouseEvent = contextSafe((e: React.MouseEvent) => {
     if (!e || !e.clientX || !e.clientY || !xTo.current || !yTo.current) return;
     xTo.current(e.clientX);
     yTo.current(e.clientY);
-  };
+  });
   return (
     <div
       ref={containerRef}
