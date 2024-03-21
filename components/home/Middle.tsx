@@ -16,6 +16,7 @@ export const Middle = () => {
         <img
           className="brightness-[.25] object-cover fixed top-0 left-0 w-full h-full lg:w-2/3 lg:right-0 lg:left-auto lg:bottom-0"
           src="/photos/IMG_sendero.webp"
+          alt="Sendero sinuodal por un serro en Jujuy"
         />
       </div>
     </div>

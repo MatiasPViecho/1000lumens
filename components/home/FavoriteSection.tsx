@@ -73,6 +73,7 @@ export const FavoriteSection = () => {
           <img
             className="h-full max-h-[515px] w-auto snap-center md:snap-none"
             src="/photos/IMG_camino.webp"
+            alt="Carretera apuntando en forma de triángulo a una montaña con un charco de agua embarrado a los pies"
           />
         </li>
         <li
@@ -82,6 +83,7 @@ export const FavoriteSection = () => {
           <img
             className="h-full max-h-[515px] "
             src="/photos/IMG_trabajo.webp"
+            alt="Obrero realizando un trabajo de cerámica en barro, colores cálidos"
           />
         </li>
         <li
@@ -91,6 +93,7 @@ export const FavoriteSection = () => {
           <img
             className="h-full max-h-[515px] "
             src="/photos/IMG_tanque.webp"
+            alt="Montaje de una estructura prendida fuego"
           />
         </li>
         <li
@@ -100,6 +103,7 @@ export const FavoriteSection = () => {
           <img
             className="h-full max-h-[515px] w-auto"
             src="/photos/IMG_5514.webp"
+            alt="Patinadora realizando un truco"
           />
         </li>
         <li
