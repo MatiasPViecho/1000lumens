@@ -21,7 +21,6 @@ export default function RootLayout({
     <html lang="es">
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${inter.className} relative`}>
-        {/* <MouseMove /> */}
         <Header />
         {children}
       </body>
