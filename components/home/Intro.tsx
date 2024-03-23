@@ -2,7 +2,7 @@ export const Intro = () => {
   return (
     <div className="relative max-h-[600px] overflow-hidden lg:h-full pointer-events-none">
       <img
-        className="brightness-[.25] lg:h-full"
+        className="brightness-[.25] lg:h-full aspect-square lg:aspect-[43/60]"
         src="/photos/IMG_2450.webp"
         alt="Celebración del mundial 2022 en Argentina"
       />
