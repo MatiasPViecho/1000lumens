@@ -14,7 +14,7 @@ export const Middle = () => {
       </div>
       <div className="block relative h-[400px] sm:h-[450px] md:h-[500px] clip-scroll">
         <img
-          className="brightness-[.25] object-cover fixed top-0 left-0 w-full h-full lg:w-2/3 lg:right-0 lg:left-auto lg:bottom-0"
+          className="aspect-square brightness-[.25] object-cover fixed top-0 left-0 w-full h-full lg:w-2/3 lg:right-0 lg:left-auto lg:bottom-0"
           src="/photos/IMG_sendero.webp"
           alt="Sendero sinuodal por un serro en Jujuy"
         />
