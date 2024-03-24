@@ -1,6 +1,9 @@
 import { FramedPhoto } from "@/components/FramedPhoto";
 import { MouseIconContainer } from "@/components/MouseIconContainer";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Fotos | 1000Lumens ",
+};
 export default function PhotosPage() {
   return (
     <section>

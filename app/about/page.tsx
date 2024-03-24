@@ -1,5 +1,8 @@
 import { MouseIconContainer } from "@/components/MouseIconContainer";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Sobre mí | 1000Lumens",
+};
 export default function About() {
   return (
     <section>
