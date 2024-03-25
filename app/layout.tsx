@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://1000lumens.vercel.app/"),
   title: {
     template: "%s | 1000Lumens",
     default: "1000Lumens",
