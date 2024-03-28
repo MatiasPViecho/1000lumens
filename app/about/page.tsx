@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <section>
-      <MouseIconContainer classes="px-4 flex flex-col gap-12 pt-16 sm:pt-24 max-w-md sm:max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto md:text-left md:px-8 relative h-screen">
+      <MouseIconContainer classes="px-4 flex flex-col gap-12 pt-16 mb-16 sm:mb-32 sm:pt-24 max-w-md sm:max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto md:text-left md:px-8 relative h-max">
         <div className="flex flex-col gap-8 sm:flex-row md:gap-0">
           <img
             className="mx-auto max-w-40 max-h-40 rounded-full md:clear-left md:order-2"
