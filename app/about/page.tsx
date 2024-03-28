@@ -14,21 +14,20 @@ export default function About() {
             src="/photos/IMG_5240_FACE.webp"
           />
           <p className="text-md md:order-1 md:text-lg md:max-w-prose md:my-auto ">
-            Soy Matías, tengo 22 años y desde que soy chico investigo y me
-            encanta saber cómo funcionaban las cosas que me interesaban (juegos,
-            webs, programas) internamente, cómo estaban programados, cómo
-            estaban creados.
+            Mi nombre es Matías, tengo 22 años y la curiosidad siempre ha sido
+            mi compañera de viaje. Desde que era niño, me he sentido atraído por
+            entender cómo funcionan las cosas que me fascinan, ya sean juegos,
+            sitios web o programas. Cómo estaban programados, cómo estaban
+            creados.
           </p>
         </div>
         <p className="text-md md:text-lg md:max-w-prose md:text-balance">
-          Especialmente cree esta web ya que, además de eso, desde chico me
-          dediqué a la fotografía, usé mi primera cámara a los 8 años y es un
-          recuerdo que nunca olvidaré, espero que disfrutes de la selección de
-          fotos que te dejo
+          Pero mi vida no se limita solo a la tecnología; desde pequeño, también
+          he tenido una pasión por la fotografía. A los 8 años, sostuve mi
+          primera cámara y desde entonces, he estado capturando momentos
+          especiales. Ahora, te invito a disfrutar de la selección de fotos que
+          he preparado especialmente para ti.
         </p>
-        <div className="absolute py-4 px-8 text-md left-0 right-0 bottom-24 bg-stone-500 mx-auto text-center text-white max-w-80 rounded-3xl shadow-xl hover:bg-stone-400 transition-all cursor-default">
-          <span>WIP - Portfolio de dev!</span>
-        </div>
       </MouseIconContainer>
     </section>
   );
