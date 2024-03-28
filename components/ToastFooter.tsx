@@ -5,7 +5,7 @@ export const ToastFooter = () => {
       rel="nofollow noopener noreferrer"
       target="_blank"
     >
-      <div className="sticky mx-auto bottom-8 w-max px-4 py-2 text-md font-semibold bg-white border-black border-1 rounded-full z-50 flex gap-4">
+      <div className="sticky mx-auto bottom-8 w-max px-4 py-2 text-md font-semibold bg-white border-black border rounded-full z-50 flex gap-4 md:hover:px-6 md:hover:py-4 transition-all md:border-b-2 md:active:border-b-1 md:active:px-4 md:active:py-2 md:hover:border-b-4 ">
         <span>Repositorio del proyecto</span>
         <svg
           width="24"
