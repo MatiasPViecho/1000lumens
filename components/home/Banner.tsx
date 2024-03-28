@@ -8,7 +8,6 @@ export const Banner = () => {
           href="https://github.com/MatiasPViecho"
           target="_blank"
           className="underline decoration-blue-600 text-blue-600 decoration-2 underline-offset-2 visited:decoration-violet-800 visited:text-violet-800 pointer-events-auto cursor-pointer"
-          tabIndex={6}
         >
           DEVELOPER
         </a>{" "}
